@@ -1,7 +1,5 @@
 package me.wani4ka.lands;
 
-import com.sun.net.httpserver.Headers;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -45,7 +43,7 @@ public class Static {
 
     static String lookupMime(String path) {
         String ext = getExt(path).toLowerCase();
-        return MIME_MAP.getOrDefault(ext, "application/octet-stream");
+        return MIME_MAP.getOrDefault(ext, "text/html");
     }
 
     static void copyStream(InputStream input, OutputStream output) throws IOException {
