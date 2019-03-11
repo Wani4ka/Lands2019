@@ -1,0 +1,5 @@
+{
+  "name": "Wani4ka Lands 2019",
+  "description": "Wani4ka Lands project reborn.",
+  "addons": [ "heroku-postgresql" ]
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Wani4ka Lands 2019</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/storage/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css" media="screen">
+        body, html {
+            height: 100%;
+        }
+        .bg-image {
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+            height: 100%;
+            background: url("/storage/assets/locations/forest.jpg") no-repeat center;
+            background-size: cover;
+        }
+        div#wrapper {
+            text-align: center;
+            text-align: -moz-center;
+            text-align: -webkit-center;
+            position: absolute;
+            top:  50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 2;
+        }
+        #head {
+            font-family: cursive;
+            font-size: 60px;
+            color: #fff;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #388e3c, 0 0 40px #388e3c, 0 0 50px #388e3c, 0 0 60px #388e3c, 0 0 70px #388e3c;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #4caf50, 0 0 40px #4caf50, 0 0 50px #4caf50, 0 0 60px #4caf50, 0 0 70px #4caf50, 0 0 80px #4caf50;
+            }
+        }
+        div#form {
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            padding: 15px;
+            color: #e0e0e0;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0, 0.5);
+        }
+        .centered {
+            text-align: center;
+            text-align: -moz-center;
+            text-align: -webkit-center;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-image"></div>
+    <div id="wrapper">
+        <h1 id="head">Lands 2019</h1>
+        <div id="form">
+            <h1 class="font-weight-light">Добро пожаловать</h1>
+            <form id="enter" action="game" method="post">
+                <div class="form-group row">
+                    <label for="name"></label>
+                    <input id="name" placeholder="Имя персонажа" required name="name" class="form-control-sm mx-auto centered" type="text">
+                </div>
+                <button form="enter" type="submit" class="btn-primary btn-lg rounded btn-block">Войти</button>
+            </form>
+        </div>
+    </div>
+    <script src="/storage/js/bootstrap.min.js"></script>
+</body>
+</html>
