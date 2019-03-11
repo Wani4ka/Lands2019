@@ -52,16 +52,7 @@ public class Server {
                 sendFile(t, 404, "error.html");
                 return;
             }
-            File f = new File("index.html");
-            BufferedReader reader = new BufferedReader(new FileReader(f));
-            StringBuilder s = new StringBuilder();
-            while (reader.ready())
-                s.append(reader.readLine());
-            reader.close();
-            t.sendResponseHeaders(200, s.toString().getBytes(StandardCharsets.UTF_8).length);
-            OutputStream os = t.getResponseBody();
-            os.write(s.toString().getBytes(StandardCharsets.UTF_8));
-            os.close();
+            sendFile(t, 200, "index.html");
         }
     }
 
