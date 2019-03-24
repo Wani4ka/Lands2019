@@ -7,10 +7,16 @@ import org.apache.catalina.webresources.DirResourceSet;
 import org.apache.catalina.webresources.StandardRoot;
 import org.apache.tomcat.util.descriptor.web.ErrorPage;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
+import java.net.MalformedURLException;
 
 public class Main {
+
+    public static File getContextFile(HttpServletRequest req, String name) throws MalformedURLException {
+        return new File(req.getServletContext().getResource(name).getFile());
+    }
 
     public static void main(String[] args) throws Exception {
 

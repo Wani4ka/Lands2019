@@ -9,7 +9,7 @@
     <name>Lands2019</name>
 
     <properties>
-        <tomcat.version>[8.0.53,)</tomcat.version>
+        <tomcat.version>8.0.53</tomcat.version>
     </properties>
 
     <dependencies>
